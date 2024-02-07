@@ -4,7 +4,7 @@ function Navbar (props) {
     //should display the App's name and logo
 
     return (
-        <header>
+        <header id="header">
             <h1>Recipe Book APP</h1><img src="" alt="app logo"></img>
         </header>
     )

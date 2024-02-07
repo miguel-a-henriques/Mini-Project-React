@@ -1,3 +1,4 @@
+import github from "../assets/images/github.png"
 
 function Footer (props) {
 
@@ -5,7 +6,7 @@ function Footer (props) {
     return (
         <footer id="footer">
             <a href="https://github.com/miguel-a-henriques/Mini-Project-React">
-            <img src="https://banner2.cleanpng.com/20180615/kff/kisspng-computer-icons-github-logo-github-5b23f7d7474c14.790619341529083863292.jpg" alt="GitHub logo"></img>
+            <img src={github} alt="GitHub logo"></img>
             </a>
         </footer>
     )
