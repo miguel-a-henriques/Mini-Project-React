@@ -2,6 +2,7 @@ import './App.css'
 import Footer from "./components/footer";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import RecipeList from "./components/ListRecipes";
 
 function App() {
 
@@ -11,7 +12,9 @@ function App() {
     <Navbar></Navbar>
     <Sidebar></Sidebar>
     <Footer></Footer>
+    < RecipeList />
     </>
+    
   )
 }
 
