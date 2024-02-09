@@ -1,15 +1,25 @@
 import { NavLink } from "react-router-dom";
 import recipes from "../assets/data/recipes.json";
 import { useState } from "react";
+import AddReceipe from "./AddRecipe";
 
 function RecipeList() {
     const [recipeList, setRecipeList] = useState(recipes);  
     const removeRecipe = (id) => {
       setRecipeList(recipeList.filter((recipe) => recipe.id !== id));
     }
+
+function addNewRecipe(newRecipe) {
+      setRecipeList([...recipeList, newRecipe]);
+      const updatedRecipeList = [...recipeList, newRecipe];
+      setRecipeList(updatedRecipeList);
+}
+
+
     return (
 
           <div style={{alignItems:'center',justifyContent:'center', display: "flex", flexWrap: "wrap", margin: 50}}>
+            <AddReceipe addNewRecipe={addNewRecipe} />
             {recipeList.map((recipe) => (
               <div key={recipe.id} style={{margin: 20, border:"2px solid black", padding: 10 }}>
                 <NavLink to={`/recipelist/${recipe.id}`}>
