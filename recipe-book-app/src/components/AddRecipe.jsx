@@ -22,7 +22,7 @@ function AddReceipe(props) {
         console.log(newRecipe);
 
         props.addNewRecipe(newRecipe);
-        setId ();
+        //setId ();
         setName("");
         setCalories("");
         setServings(1);
@@ -30,17 +30,20 @@ function AddReceipe(props) {
 
     }
     function handleImageUpload(event) {
-        const file = event.target.files[0]; // Obtém o primeiro arquivo selecionado pelo usuário
+        const file = event.target.files[0]; // Obtenha o arquivo do evento
         if (file) {
-          const reader = new FileReader(); // Cria um objeto FileReader
+          const reader = new FileReader(); // Crie um leitor de arquivo
           reader.onload = function(e) {
-            const imageSrc = e.target.result; // Obtém a URL da imagem carregada
+            const imageSrc = e.target.result; // Obtenha o caminho da imagem
             // Faça o que quiser com a URL da imagem, como exibi-la ou enviá-la para o servidor
-            console.log("Imagem carregada:", imageSrc);
+            console.log("Imagem carregada:", imageSrc); 
           }
           reader.readAsDataURL(file); // Lê o arquivo como uma URL de dados
         }
       }
+
+
+      
 
     return (
         <section>
@@ -54,7 +57,7 @@ function AddReceipe(props) {
                 <label>Servings</label>
                 <input type="number" name="servings" value={servings} onChange={(e) => setServings(e.target.value)} />
                 <label>Image</label>
-                <input type="file" name="image/*" value={image} onChange={handleImageUpload/* (e) => setImage(e.target.value) */} />
+                <input type="file" name="image/*" value={image} onChange={handleImageUpload /* (e) => setImage(e.target.value) */} />
          
                 <button type="submit">Add Recipe</button>
             </form>
