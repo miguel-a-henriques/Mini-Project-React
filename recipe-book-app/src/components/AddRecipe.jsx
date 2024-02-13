@@ -53,9 +53,9 @@ function AddReceipe(props) {
                 <label>Name</label>
                 <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
                 <label>Calories</label>
-                <input type="number" name="calories" value={calories} onChange={(e) => setCalories(e.target.value)} />
+                <input type="number" name="calories" value={calories} onChange={(e) => setCalories(e.target.value)} min={0}/>
                 <label>Servings</label>
-                <input type="number" name="servings" value={servings} onChange={(e) => setServings(e.target.value)} />
+                <input type="number" name="servings" value={servings} onChange={(e) => setServings(e.target.value)} min={0}/>
                 <label>Image</label>
                 <input type="file" name="image/*" value={image} onChange={handleImageUpload /* (e) => setImage(e.target.value) */} />
          
