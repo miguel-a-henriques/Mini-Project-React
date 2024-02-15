@@ -1,8 +1,17 @@
+#header {
+  background-image: url(./assets/images/banner.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 
 .logo {
@@ -96,68 +105,45 @@
 /******************************************************************************/
 /****************Button About Page*********************************************/
 /******************************************************************************/
-.card1 {
+.buttondan{
   display: flex;
-  height: 70px;
-  width: 270px;
-  background-color:#5e5e5e;
-  
-}
-
-.card1 svg {
-  position: absolute;
-  display: flex;
-  width: 60%;
-  height: 100%;
-  font-size: 24px;
-  font-weight: 700;
-  opacity: 1;
-  transition: opacity 0.25s;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.card1 .social-link1,.card1 .social-link2{
-  position: relative;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 25%;
-  color: whitesmoke;
-  font-size: 24px;
-  text-decoration: none;
-  transition: 0.25s;
-  border-radius: 50px;
+  align-items: center;
+}
+.buttonmig{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card1 svg {
-  transform: scale(1);
+
+.button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  animation: sway 2s infinite alternate;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+  transition: transform 0.5s, box-shadow 0.5s;
+  margin: 10px;
 }
 
-.card1 .social-link1:hover {
-  background-color: #5e5e5e;
-  animation: bounce_613 0.4s linear;
+.button:hover {
+  transform: scale(1.5) rotate(-360deg) translateY(-1em);
+  box-shadow: 0 0 20px 0 rgba(29, 161, 242, 0.5);
 }
 
-.card1 .social-link2:hover {
-  background-color: #0a66c2;
-  animation: bounce_613 0.4s linear;
+.icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+  transition: transform 0.5s;
 }
 
-@keyframes bounce_613 {
-  40% {
-    transform: scale(1.4);
-  }
-
-  60% {
-    transform: scale(0.8);
-  }
-
-  80% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.icon:hover {
+  transform: scale(8);
+  filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.9))
 }
