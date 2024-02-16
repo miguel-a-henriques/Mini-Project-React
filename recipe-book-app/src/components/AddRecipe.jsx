@@ -52,11 +52,11 @@ function AddReceipe(props) {
 
                 <label>Name</label>
                 <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
-                <label>Calories</label>
+                <label> Calories</label>
                 <input type="number" name="calories" value={calories} onChange={(e) => setCalories(e.target.value)} min={0}/>
-                <label>Servings</label>
+                <label> Servings</label>
                 <input type="number" name="servings" value={servings} onChange={(e) => setServings(e.target.value)} min={0}/>
-                <label>Image</label>
+                <label> Image</label>
                 <input type="file" name="image/*" value={image} onChange={handleImageUpload /* (e) => setImage(e.target.value) */} />
          
                 <button type="submit">Add Recipe</button>

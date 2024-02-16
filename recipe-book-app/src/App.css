@@ -5,6 +5,17 @@
   display: flex;
   justify-content: center;
 }
+#footer {
+  background-image: url(./assets/images/footer.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+#sidebar{
+  background-color: rgb(64, 64, 64);
+  
+}
 
 #root {
   max-width: 1280px;
@@ -54,6 +65,7 @@
   height: 50px;
   width: 50px;
 }
+
 
 .Btn {
   border: none;
